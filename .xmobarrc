@@ -1,0 +1,6 @@
+Config { font = "xft:Inconsolata:Medium:size=8"
+       , bgColor = "#222222"
+       , fgColor = "#ffffff"
+       , position = TopW L 100
+       , lowerOnStart = True
+       }
