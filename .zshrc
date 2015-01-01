@@ -2,12 +2,14 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+stty stop undef
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 bindkey -v
 setopt auto_cd
 setopt auto_pushd
 setopt list_packed
+setopt extended_history
 
 export LANG=en_US.UTF8
 case ${UID} in
@@ -56,6 +58,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tm='tmux -2'
 alias llss='ls -l |less'
+alias h='htop'
 
 alias bye='pm-suspend;xlock'
 alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
@@ -63,4 +66,20 @@ alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 alias u='cd ..'
 alias uu='cd ../../'
 alias uuu='cd ../../../'
+
+alias quartus='~/altera/13.1/quartus/bin/quartus  --64bit'
+
+alias synccc='sync && echo "Allah akbar\n" && sync && echo "ashhadu an la ilaha illallaah\n" && sync && echo "wa ašhadu anna Muhammadan Rasùl Allàh" '
+alias univproxy='ssh -f -N -D 8080 s1211402@abelia01.coins.tsukuba.ac.jp'
+
+export PATH=/opt/sparc-elf/bin:$PATH
+export PATH=/home/iorivur/arm-newlib/bin:$PATH
+export PATH=./.cabal/bin:$PATH:/home/iorivur/.local/bin:/opt/Xilinx/12.2/ISE_DS/ISE/bin/lin64:/home/iorivur/.gem/ruby/2.0.0/bin:/opt/Xilinx/12.2/ISE_DS/EDK/bin/lin64:/opt/or1k-toolchain/bin:/home/iorivur/src/verilog/orpsocv2/sw/utils:/home/iorivur/build/go/bin:~/altera/13.1/quartus/bin:~/altera/13.1/modelsim_ase/bin
+
+export PATH=/home/iorivur/build/gcc-arm-none-eabi-4_8-2014q2/bin:$PATH
+export PATH=~/.bin:$PATH
+
+export LD_LIBRARY_PATH=/home/iorivur/altera/13.1/lib
+export GOROOT=$HOME/build/go
+export GOPATH=$HOME/build/go/bin
 
